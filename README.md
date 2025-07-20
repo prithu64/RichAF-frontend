@@ -1,12 +1,27 @@
-# React + Vite
+# 💸 RichAF
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and stylish fake payment web app where users can send money to each other just for fun — because why not pretend we’re billionaires?
 
-Currently, two official plugins are available:
+![RichAF Banner](https://img.shields.io/badge/Made%20with-Love-red?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🤡 Why
+-  Because sometimes, you just want to feel like Elon Musk for a day.
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 User signup and login (with balance input)
+- 👥 Browse and search users (except yourself!)
+- 💸 Send fake money to others (because you’re RichAF)
+- 👁️ Toggle password visibility (for fancy feels)
+- ⚙️ Secure routes using JWT
+- 🎨 Responsive TailwindCSS styling
+
+## 🧪 Tech Stack
+
+- **Frontend:** React + Tailwind CSS
+- **Backend:** Node.js + Express
+- **Database:** MongoDB
+- **Auth:** JSON Web Token (JWT)
+
+## Link ()
