@@ -24,4 +24,4 @@ A simple and stylish fake payment web app where users can send money to each oth
 - **Database:** MongoDB
 - **Auth:** JSON Web Token (JWT)
 
-## Link ()
+## Link (https://richaf.netlify.app/)
