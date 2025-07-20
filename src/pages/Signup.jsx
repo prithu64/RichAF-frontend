@@ -14,6 +14,7 @@ const Signup = () => {
   const [username,setUsername]   = useState("")
   const [password,setPassword]   = useState("")
   const [balance,setBalance]     = useState(null)
+  const [btnText,setBtnText] = useState("Sign up")
   const [passwordState,setPasswordState] = useState("password")
   const [eyeIconVisibility,setEyeIconVisibility] = useState(false)
   const navigate = useNavigate()
@@ -30,9 +31,10 @@ const Signup = () => {
 
 
 
-  const handleSignUp = (e)=>{
-    e.preventDefault()
-   const response = axios.post("https://richaf-back.onrender.com/api/v1/user/signup",{
+  const handleSignUp = async(e)=>{
+   e.preventDefault()
+   setBtnText("Signing up...")
+   const response = await axios.post("https://richaf-back.onrender.com/api/v1/user/signup",{
       username,
       firstName,
       lastName,
@@ -40,10 +42,17 @@ const Signup = () => {
       balance : Number(balance)
     }).then((response)=>{
       localStorage.setItem("token",response.data.token)
-      alert("Sign up successfull")
-      navigate("/dashboard?username="+ username ,{replace : true})
+      setBtnText("Sign up")
+      console.log("response :  ",response.data)
+      if(response.data.success){
+        alert("Sign up successfull")
+       navigate("/dashboard?username="+ username ,{replace : true})
+      }else{
+        alert("Invalid Input")
+      }
     }).catch((err)=>{
       alert("Error in sign in",err)
+      setBtnText("Sign up")
     })  
   }
 
@@ -93,7 +102,7 @@ const Signup = () => {
           }}
           />
          
-          <FormBtn label={"Sign up"} onClick={handleSignUp} />  
+          <FormBtn label={btnText} onClick={handleSignUp} />  
           
           <BottomComp text={"Already have an account ?"} Pagelabel={"Sign In"} to={"/signin"}/>
         </form>

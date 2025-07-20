@@ -9,10 +9,11 @@ import { replace,useNavigate } from "react-router";
 
 const Signin = () => {
     
-    const [username,setUsername] = useState("")
-    const [password,setPassword]   = useState("")
+    const [username,setUsername] = useState(null)
+    const [password,setPassword]   = useState(null)
     const [passwordState,setPasswordState] = useState("password")
     const [eyeIconVisibility,setEyeIconVisibility] = useState(false)
+    const [btnText,setBtnText] = useState("Sign up")
     const navigate  = useNavigate()
   
      const togglePasswordVisibility = (e)=>{
@@ -25,18 +26,26 @@ const Signin = () => {
       setEyeIconVisibility(false)
     }}
 
-    const handleSignin = (e)=>{
+    const handleSignin = async(e)=>{
+      setBtnText("Signing in...")
        e.preventDefault()
-        const response = axios.post("https://richaf-back.onrender.com/api/v1/user/signin",{
+       if((username && password) === null){
+         alert("Input required")
+         setBtnText("Sign in")
+         return;
+       }
+       const response = await axios.post("https://richaf-back.onrender.com/api/v1/user/signin",{
         username,
         password
        }).then((response)=>{
         console.log(response.data.message)
         if(response.data.success){
           localStorage.setItem("token",response.data.token)
+          setBtnText("Sign in")
           alert("Signed in successfully")
           navigate("/dashboard?username="+ username ,{replace : true})
         }else{
+          setBtnText("Sign in")
           alert("User doesn't exist ")
         }
        })
@@ -66,7 +75,7 @@ const Signin = () => {
              </button>
           </div>
        
-          <FormBtn label={"Sign in"} onClick={handleSignin} />  
+          <FormBtn label={btnText} onClick={handleSignin} />  
          
           <BottomComp text={"Don't have an account ?"} to={"/signup"} Pagelabel={"Sign Up"}/>
 
