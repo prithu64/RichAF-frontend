@@ -11,5 +11,5 @@ export default function Coin3D(props) {
     ref.current.rotation.y += 0.005 
   })
 
-  return <primitive ref={ref} object={scene} scale={8} {...props} />
+  return <primitive ref={ref} object={scene} scale={9} {...props} />
 }

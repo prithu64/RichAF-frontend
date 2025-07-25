@@ -26,7 +26,7 @@ function Hero() {
       </div>
 
       {/*right */} 
-       <div className="h-[300px] mx-auto  mt-10 md:mt-0">
+       <div className="h-[250px] md:h-[300px] mx-auto mt-12 md:mt-0">
         <Canvas camera={{ position: [0, 0, 3] }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[0, 0, 5]} intensity={1} />
