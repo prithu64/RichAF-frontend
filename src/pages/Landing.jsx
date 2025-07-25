@@ -4,12 +4,13 @@ import Hero from "../component/Hero";
 import Navbar from "../component/Navbar";
 
 function Landing() {
-  const [showHowItWorks, setShowHowItWorks] = useState(false);
+  const [isOpen,setIsOpen] = useState(false)
  
   return (   
     <div>
-      <Navbar/>
+      <Navbar setIsOpen={setIsOpen}/>
       <Hero/>
+      <HowItWorksModal isOpen={isOpen} onClose={()=>{setIsOpen(false)}} />
     </div>
   
 

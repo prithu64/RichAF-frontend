@@ -2,12 +2,14 @@ import { useContext } from "react";
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { MdWbSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
-import { DarkThemeContext } from "../contexts/DarkThemeContext.js";
+import { DarkThemeContext } from "../contexts/DarkThemeContext";
 
 
-function Navbar() { 
+
+function Navbar({setIsOpen}) { 
   
   const {isDark,setIsDark} = useContext(DarkThemeContext)
+  
 
   const toggleDarkTheme = ()=>{
     if(isDark === "dark"){
@@ -15,12 +17,13 @@ function Navbar() {
     }else{
       setIsDark("dark")
     }
+    console.log("is dark: ",isDark)
   }
 
   return (
     <div className="fixed top-0 z-50 w-full dark:text-white ">
       <div className="px-2 py-4">
-        <div className="flex justify-between backdrop-blur-lg shadow-sm items-center py-2 max-w-sm sm:max-w-2xl md:max-w-3xl mx-auto border px-3 dark:border-white/30 rounded-sm">
+        <div className="flex justify-between backdrop-blur-lg shadow-sm items-center py-2 max-w-sm sm:max-w-2xl md:max-w-3xl mx-auto border px-3 dark:border-white/30 rounded-full">
           {/* Logo */}
         <div className="font-semibold text-lg">RichAF</div>
 
@@ -32,7 +35,7 @@ function Navbar() {
           } 
          </button>
           {/* how to ? */}
-          <button className="cursor-pointer">
+          <button onClick={()=>{setIsOpen(prev=>(!prev))}} className="cursor-pointer">
             <BsFillQuestionCircleFill size={25} />
           </button>
         </div>

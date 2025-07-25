@@ -23,7 +23,7 @@ function UserComp() {
 
   return (
   
-    <div className="px-2 pt-2 ">
+    <div className="px-2 pt-2 dark:text-white max-w-5xl mx-auto ">
         <h1 className="mb-1">Users</h1>
         <input type="search" onChange = {(e)=>{
           setFilter(e.target.value)
@@ -40,7 +40,7 @@ function UserComp() {
                       onClick={()=>{
                         navigate("/sendmoney?id="+user.id+"&firstName="+user.firstName+"&lastName="+user.lastName)
                       }}
-                      className="border px-2 text-white bg-slate-700 rounded-sm cursor-pointer" >Send Money</button>
+                      className="border px-2 text-white dark:hover:bg-white/90 dark:text-black dark:bg-white/65 bg-slate-700 rounded-sm cursor-pointer" >Send Money</button>
                   </div>
           })
         }

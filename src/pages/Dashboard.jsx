@@ -26,9 +26,9 @@ function Dashboard() {
   },[token,username])
 
   return (
-    <div className='max-w-6xl px-2 mx-auto '>
+    <div className='p-2 min-h-screen bg-gray-500/20  dark:bg-black/90 space-y-6  '>
         <AppBar username={username}/>
-        <BalanceComp balance={balance}/>
+        <BalanceComp balance={balance} username={username}/>
         <UserComp />
     </div>
   )

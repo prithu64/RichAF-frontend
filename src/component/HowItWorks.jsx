@@ -31,10 +31,10 @@ const HowItWorksModal = ({ isOpen, onClose }) => {
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center">How it Works</h2>
 
         <ul className="space-y-3 text-sm sm:text-base text-white/90">
-            <li>😎 Create your RichAF profile — cool name required.</li>
-            <li>💸 Pick your balance (yes, you decide how rich you are).</li>
-            <li>🔐 Stay secure — no scams, no drama.</li>
-            <li>✨ Flaunt your fake fortune. Send money. Rule the world.</li>
+            <li>1. Create your RichAF profile — cool name required.</li>
+            <li>2. Pick your balance (yes, you decide how rich you are).</li>
+            <li>3. Stay secure — no scams, no drama.</li>
+            <li>4. Flaunt your fake fortune. Send money. Rule the world.</li>
         </ul>
         <p className="mt-4 text-xs sm:text-sm text-white/60 italic text-center">
             ⚠️ May cause delusion. Use wisely.

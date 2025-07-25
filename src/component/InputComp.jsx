@@ -3,7 +3,7 @@
 function InputComp({label,placeholder,type,onChange}) {
   return (
      <div>
-            <label className="block mb-1 text-sm font-medium text-gray-700">{label}</label>
+            <label className="block mb-1 dark:text-white/60 text-sm font-medium text-gray-700">{label}</label>
             <input
               type={type}
               onChange={onChange}

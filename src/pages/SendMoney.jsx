@@ -34,8 +34,8 @@ function SendMoney() {
   
 
   return (
-    <div className='flex justify-center items-center min-h-screen bg-slate-200'>
-        <div className='border border-gray-500 px-4 py-6 rounded-xl shadow-lg bg-white'>
+    <div className='flex justify-center items-center min-h-screen dark:bg-black/90 dark:text-white bg-slate-200'>
+        <div className='border border-gray-500 px-4 py-6 rounded-xl shadow-lg'>
             <FormHeading  label={"Send Money"}/>
             <div className='flex gap-2 items-center mb-4'>
                 <h1 className='border rounded-full bg-green-400 text-xl text-white text-center  h-10 w-10 '>{firstName[0]}</h1>

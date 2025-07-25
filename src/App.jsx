@@ -11,9 +11,8 @@ import { DarkThemeContext } from './contexts/DarkThemeContext'
 function App() {
   const [isDark,setIsDark] = useState("dark")
   return (
-    <>
-    <DarkThemeContext.Provider value={{isDark,setIsDark}}>
-        <div className={`${isDark}`}>
+    <DarkThemeContext.Provider value = {{isDark,setIsDark}} >
+        <div className= {`${isDark}`}>
         <BrowserRouter>
          <Routes>
            <Route path='/' element = {<Landing/>} />
@@ -25,9 +24,6 @@ function App() {
      </BrowserRouter>
      </div> 
     </DarkThemeContext.Provider>
-    
-    
-    </>
   )
 }
 

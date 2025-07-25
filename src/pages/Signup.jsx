@@ -58,9 +58,9 @@ const Signup = () => {
 
   return (
     
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+    <div className="flex items-center dark:bg-black/90 dark:text-white justify-center min-h-screen bg-gray-100 px-4">
       
-      <div className="w-full max-w-md bg-white p-6 rounded-2xl shadow-lg">
+      <div className="w-full max-w-md border  p-6 rounded-2xl shadow-lg">
        <FormHeading label={"Create an account"} />
         <form className="space-y-4">
           
