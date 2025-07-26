@@ -8,8 +8,8 @@ export default function Coin3D(props) {
   const { scene } = useGLTF("/models/dollarCoin.glb") 
 
   useFrame(() => {
-    ref.current.rotation.y += 0.005 
+    ref.current.rotation.y += 0.001 
   })
 
-  return <primitive ref={ref} object={scene} scale={9} {...props} />
+  return <primitive ref={ref} object={scene} scale={7} {...props} />
 }
