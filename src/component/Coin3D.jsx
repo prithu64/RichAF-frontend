@@ -5,7 +5,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Coin3D(props) {
   const ref = useRef()
-  const { scene } = useGLTF("/models/interesting_coin.glb") 
+  const { scene } = useGLTF("/models/dollarCoin.glb") 
 
   useFrame(() => {
     ref.current.rotation.y += 0.005 

@@ -27,7 +27,7 @@ function Dashboard() {
 
   return (
     <div className='p-2 min-h-screen bg-gray-500/20  dark:bg-black/90 space-y-6  '>
-        <AppBar username={username}/>
+        <AppBar/>
         <BalanceComp balance={balance} username={username}/>
         <UserComp />
     </div>

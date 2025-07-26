@@ -7,7 +7,7 @@ import { MdWbSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 
 
-function AppBar({username}) {
+function AppBar() {
   
   const navigate = useNavigate()
 
