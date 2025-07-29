@@ -25,7 +25,13 @@ function Navbar({setIsOpen}) {
       <div className="px-2 py-4">
         <div className="flex justify-between backdrop-blur-lg shadow-sm items-center py-2 max-w-sm sm:max-w-2xl md:max-w-3xl mx-auto border px-3 dark:border-white/30 rounded-full">
           {/* Logo */}
-        <div className="font-semibold text-lg">RichAF</div>
+        <div className="font-semibold text-lg flex">
+        
+          {
+            isDark?<img className="h-[30px] mr-2"  src="/richLogoDark.png"/> :<img className="h-[30px] mr-2"  src="/richLogoLight.png"/> 
+          }  
+          RichAF
+          </div>
 
         
         <div className="flex items-center gap-x-4">

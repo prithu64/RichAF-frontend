@@ -33,7 +33,12 @@ function AppBar() {
   return (
     <div className="pt-3  dark:text-white">
         <div className="justify-between items-center max-w-5xl mx-auto flex py-2 px-4 border dark:border-white/30 rounded-3xl">
-             <div><Logo/></div>
+             <div className="flex ">
+               {
+                 isDark?<img className="h-[30px] mr-2"  src="/richLogoDark.png"/> :<img className="h-[30px] mr-2"  src="/richLogoLight.png"/> 
+               }  
+               <Logo/>
+              </div>
              <div className="flex items-center gap-x-2"> 
                     
                  <button className="border p-2 rounded-full" onClick={toggleDarkTheme}>

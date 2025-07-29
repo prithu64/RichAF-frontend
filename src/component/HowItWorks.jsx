@@ -14,7 +14,7 @@ const HowItWorksModal = ({ isOpen, onClose }) => {
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 sm:px-6 md:px-10"
+      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 sm:px-6 md:px-10 "
     >
       <div
         onClick={(e) => e.stopPropagation()}
